@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 750px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+
+.header {
+    border: 1px solid black;
+    text-align: center;
+    padding: 2px;
+    margin-top: 10px;
+}
+
+.box {
+    border: 1px solid black;
+    margin-bottom: 10px;    
+    padding: 2px;
+}
+
+img {
+    padding: 10px;
+    height: 100%;
+    width: 500px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+button {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5px;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 5px;
+}

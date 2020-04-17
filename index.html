@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" type="A quiz about US History.">
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <link rel="shortcut icon" href="#">
+    <title>US History Quiz</title>
+</head>
+<body>
+    <header class="header">
+        <section class="quiz-name">
+            <h1>US History Quiz</h1>
+        </section>
+        <section class="score-question-counter">
+            <p>Question: 1/10</p>
+            <p>Score: 0/10</p>
+        </section>
+    </header>
+
+<!-- Intro Page -->
+    <main class="container">
+        <section class="box">
+        <section class="intro-box">
+            <section class="intro-image">
+                <img src="quiz-app-project-pictures/opening-pic.jpg" alt="US History Picture">
+            </section>
+            <section class="start-quiz-button">
+                <button type="button" class="startButton button">Start</button>
+            </section>
+        </section>
+        </section>  
+
+<!-- Question Page -->
+        <section class="box">
+        <section class="question-box">
+        <h2>Question #1</h2>
+            <form name="question-submit">
+                <input type="radio" id="option A" name="option" value="option A">
+                <label for="option A">Discovery</label><br>
+                <input type="radio" id="option B" name="option" value="option B">
+                <label for="option B">Mayflower</label><br>
+                <input type="radio" id="option C" name="option" value="option C">
+                <label for="option C">Speedwell</label><br>
+                <input type="radio" id="option D" name="option" value="option D">
+                <label for="option D">Godspeed</label><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        </section>
+
+    <!-- Feedback Page -->
+        <section class="box">
+        <section class="answer-feedback-box">
+            <h2>Incorrect!</h2>
+            <p>Sorry, the correct answer was option 2, "Mayflower"</p>
+        </section>
+        <section class="next-question-button">
+            <button type="button" class="nextButton button">Next</button>
+        </section>
+         </section>
+
+    <!-- Final Results Screen -->
+        <section class="box">
+        <section class="quiz-results">
+            <section class="quiz-results-text">
+                <h2>Great Job!</h2>
+                <p>You scored 10/10 questions correct!</p>
+            </section>
+            <section class="intro-image">
+                <img src="quiz-app-project-pictures/ending-pic.jpg" alt="American Flag Picture">
+            </section>
+            <section class="restart-button">
+                <button type="button" class="restartButton button">Restart</button>
+            </section>
+        </section>
+        </section>
+     </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
