@@ -6,6 +6,7 @@ body {
     max-width: 750px;
     margin-left: 300px;
     margin-right: 300px;
+    text-align: center;
 }
 
 
@@ -36,14 +37,6 @@ button {
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 5px;
-}
-
-h2 {
-    text-align: center;
-}
-
-p {
-    text-align: center;
 }
 
 form {
