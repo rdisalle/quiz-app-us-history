@@ -6,78 +6,45 @@
     <meta name="description" type="A quiz about US History.">
     <link rel="stylesheet" type="text/css" href="main.css"/>
     <link rel="shortcut icon" href="#">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
     <title>US History Quiz</title>
 </head>
 <body>
+    <main class="container">
     <header class="header">
-        <section class="quiz-name">
+        <section class="quizName">
             <h1>US History Quiz</h1>
-        </section>
-        <section class="score-question-counter">
-            <p>Question: 1/10</p>
-            <p>Score: 0/10</p>
-        </section>
+        <section>
+            <ul>
+                <li class="sizeMe">Question:
+                <span class="questionCounter">0</span>/10</li>
+                <li class="sizeMe">Score:
+                <span class="score">0</span>
+                </li>
+            </ul>
+            </section>
     </header>
 
 <!-- Intro Page -->
-    <main class="container">
-        <section class="box">
-        <section class="intro-box">
-            <section class="intro-image">
-                <img src="quiz-app-project-pictures/opening-pic.jpg" alt="US History Picture">
-            </section>
-            <section class="start-quiz-button">
-                <button type="button" class="startButton button">Start</button>
-            </section>
-        </section>
+    <section class="overallBox">
+        <section class="introBox box">
+            <img src="pictures/opening-pic.jpg" alt="US History Picture">
+            <button class="startButton button">Start</button>
         </section>  
 
 <!-- Question Page -->
-        <section class="box">
-        <section class="question-box">
-        <h2>Question #1</h2>
-            <h3>What is the name of the ship that brought the Pilgrims to America?</h3>
-            <form name="question-submit">
-                <input type="radio" id="option A" name="option" value="option A">
-                <label for="option A">Discovery</label><br>
-                <input type="radio" id="option B" name="option" value="option B">
-                <label for="option B">Mayflower</label><br>
-                <input type="radio" id="option C" name="option" value="option C">
-                <label for="option C">Speedwell</label><br>
-                <input type="radio" id="option D" name="option" value="option D">
-                <label for="option D">Godspeed</label><br>
-                <input type="submit" value="Submit">
-            </form>
-        </section>
+        <section class="questionBox box altBox">
         </section>
 
     <!-- Feedback Page -->
-        <section class="box">
-        <section class="answer-feedback-box">
-            <h2>Incorrect!</h2>
-            <p>Sorry, the correct answer was option 2, "Mayflower"</p>
+        <section class="answerFeedback box altBox">
         </section>
-        <section class="next-question-button">
-            <button type="button" class="nextButton button">Next</button>
-        </section>
-         </section>
 
     <!-- Final Results Screen -->
-        <section class="box">
-        <section class="quiz-results">
-            <section class="quiz-results-text">
-                <h2>Great Job!</h2>
-                <p>You scored 10/10 questions correct!</p>
-            </section>
-            <section class="intro-image">
-                <img src="quiz-app-project-pictures/ending-pic.jpg" alt="American Flag Picture">
-            </section>
-            <section class="restart-button">
-                <button type="button" class="restartButton button">Restart</button>
-            </section>
+        <section class="quizResults box altBox">
         </section>
-        </section>
-     </main>
+    </section>
+    </main>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="index.js"></script>
 </body>
