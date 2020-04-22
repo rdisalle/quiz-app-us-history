@@ -4,27 +4,40 @@
 
 body {
     max-width: 750px;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1929FF;
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
     text-align: center;
 }
 
 
 .header {
-    border: 1px solid black;
-    text-align: center;
+    border: 10px solid white;
     padding: 2px;
     margin-top: 10px;
+    background-color: #e00000;
+    font-size: 25px;
+}
+
+.header ul {
+    padding: 2px;
+}
+
+.header li {
+    display: inline-block;
 }
 
 .box {
-    border: 1px solid black;
-    margin-bottom: 10px;    
-    padding: 2px;
+    border: 10px solid white;   
+    padding: 25px;
+    background-color: #e00000;
+    font-size: 17px;
 }
 
 img {
-    padding: 10px;
     height: 100%;
     width: 500px;
     display: block;
@@ -32,14 +45,77 @@ img {
     margin-left: auto;
 }
 
-button {
+.button {
     display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 5px;
+    width: 100px;
+    height: 25px;
+    background-color: grey;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-form {
-    text-align: center;
+.button:hover,
+.button:active {
+  background-color: black;
+  color: white;
+  border: 1px black solid;
+}
+
+legend, p {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 50px;
+    margin-top: 0;
     margin-bottom: 5px;
+}
+
+input, .radio {
+    margin-top: 25px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 750px) {
+    .box, .header, img{
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    input, .radio {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .box, .header, img{
+        width: 75%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    input, .radio {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header, h3, legend, p {
+        font-size: 15px;
+    }
+
+    label {
+        font-size: 12px;
 }
