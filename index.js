@@ -1,5 +1,6 @@
 //questions database
-const STORE = [
+const STORE = {
+    questions: [
     {
         question: 'What is the name of the ship that brought the Pilgrims to America?',
         answers: [
@@ -50,7 +51,7 @@ const STORE = [
         answers: [
             'Federalist',
             'Whig',
-            'Libetarian',
+            'Libertarian',
             'Democratic Republican'
         ],
         correctAnswer: 'Whig'
@@ -91,32 +92,31 @@ const STORE = [
         ],
         correctAnswer: 'Theodore Roosevelt'
 }
-]
-
-//variables for question and score
-let questionCounter = 0;
-let score = 0;
+],
+questionCounter: 0,
+score: 0
+}
 
 //increase questionCounter value by 1
     //display question increase
 function updateQuestionCounter() {
-    questionCounter++;
-    $('.questionCounter').text(questionCounter + 1);
+    STORE.questionCounter++;
+    $('.questionCounter').text(STORE.questionCounter + 1);
 }
 
 //increase score value by 1
     //display scores increase 
 function updateScore() {
-    score++;
-    $('.score').text(score);
+    STORE.score++;
+    $('.score').text(STORE.score);
 }
 
 //generate question
     //generate question and answers to screen
     //update question number
 function generateQuestion() {
-    if (questionCounter < STORE.length) {
-        return createQ(questionCounter); 
+    if (STORE.questionCounter < STORE.questions.length) {
+        return createQ(STORE.questionCounter); 
     }
     else {
         $('.question.box').hide();
@@ -129,13 +129,13 @@ function generateQuestion() {
 function createQ(questionIndex) {
     let formMaker = $(`<form>
       <fieldset>
-        <legend class="questionText">${STORE[questionIndex].question}</legend>
+        <legend class="questionText">${STORE.questions[questionIndex].question}</legend>
       </fieldset>
     </form>`)
   
     let fieldSelector = $(formMaker).find('fieldset');
   
-    STORE[questionIndex].answers.forEach(function (answerValue, answerIndex) {
+    STORE.questions[questionIndex].answers.forEach(function (answerValue, answerIndex) {
       $(`<label for="${answerIndex}">
           <input class="radio" type="radio" id="${answerIndex}" value="${answerValue}" name="answer" required>
           <span>${answerValue}</span>
@@ -172,7 +172,7 @@ function submitAnswer() {
         $('.answerFeedback').show();
         let selected = $('input:checked');
         let answer = selected.val();
-        let correct = STORE[questionCounter].correctAnswer;
+        let correct = STORE.questions[STORE.questionCounter].correctAnswer;
         if (answer === correct) {
             correctAnswer();
         }
@@ -203,7 +203,7 @@ function wrongAnswer() {
         `<h3>Incorrect!<h3>
         <img src="pictures/wrong-pic.jpg" alt="Red X" class="images">
             <p>Sorry, but the answer is:<p>
-            <p>${STORE[questionCounter].correctAnswer}<p>
+            <p>${STORE.questions[STORE.questionCounter].correctAnswer}<p>
         <button class="nextButton button">Next</button>`
     );
 }
@@ -240,7 +240,7 @@ function finalScore() {
       'Please try again!'
     ];
       
-    if (score >= 7) {
+    if (STORE.score >= 7) {
       array = passed;
     } else {
       array = failed;
@@ -248,15 +248,15 @@ function finalScore() {
     return $('.quizResults').html(
       `<h3>${array[0]}</h3>
           <img src="${array[1]}" alt="${array[2]}" class="images">
-          <h3>Your score is ${score} / 10</h3>
+          <h3>Your score is ${STORE.score} / 10</h3>
           <button class="restartButton button">Restart</button>`
     );
   }
 
 //reset all stats to start quiz over
 function resetStats() {
-     questionCounter = 0;
-     score = 0;
+     STORE.questionCounter = 0;
+     STORE.score = 0;
      $('.questionCounter').text(0);
      $('.score').text(0);
 }
