@@ -127,13 +127,13 @@ function generateQuestion() {
 
 //creates html for question form
 function createQ(questionIndex) {
-    let formMaker = $(`<form>
+    const formMaker = $(`<form>
       <fieldset>
         <legend class="questionText">${STORE.questions[questionIndex].question}</legend>
       </fieldset>
     </form>`)
   
-    let fieldSelector = $(formMaker).find('fieldset');
+    const fieldSelector = $(formMaker).find('fieldset');
   
     STORE.questions[questionIndex].answers.forEach(function (answerValue, answerIndex) {
       $(`<label for="${answerIndex}">
@@ -170,9 +170,9 @@ function submitAnswer() {
         event.preventDefault();
         $('.altBox').hide();
         $('.answerFeedback').show();
-        let selected = $('input:checked');
-        let answer = selected.val();
-        let correct = STORE.questions[STORE.questionCounter].correctAnswer;
+        const selected = $('input:checked');
+        const answer = selected.val();
+        const correct = STORE.questions[STORE.questionCounter].correctAnswer;
         if (answer === correct) {
             correctAnswer();
         }

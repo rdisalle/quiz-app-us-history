@@ -14,7 +14,7 @@ body {
 }
 
 .header, h3, legend, p {
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .box, .header, img{
@@ -100,8 +100,7 @@ label {
 
 input, .radio {
     margin-top: 25px;
-    margin-bottom: 5px;
-    margin-left: 10px;
+    margin-left: 2px;
     display: inline-block;
 }
 
